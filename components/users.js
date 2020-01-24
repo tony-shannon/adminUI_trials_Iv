@@ -62,7 +62,7 @@ class UsersComponent extends HTMLElement {
     document.querySelector('#edit-user').onclick = () => { this.edit() }
   }
   async getData() {
-    const res = await fetch('/assets/users.json')
+    const res = await fetch('assets/users.json')
     const json = await res.json()
     this.list = json
     this.render(this.list)

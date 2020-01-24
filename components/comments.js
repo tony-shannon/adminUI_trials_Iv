@@ -56,7 +56,7 @@ class CommentComponent extends HTMLElement {
     document.querySelector('#edit-comment').onclick = () => { this.edit() }
   }
   async getData() {
-    const res = await fetch('/assets/comments.json')
+    const res = await fetch('assets/comments.json')
     const json = await res.json()
     this.list = json
     this.render(this.list)

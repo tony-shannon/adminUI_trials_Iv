@@ -56,7 +56,7 @@ class PostsComponent extends HTMLElement {
     document.querySelector('#edit-post').onclick = () => { this.edit() }
   }
   async getData() {
-    const res = await fetch('/assets/posts.json')
+    const res = await fetch('assets/posts.json')
     const json = await res.json()
     this.list = json
     this.render(this.list)
