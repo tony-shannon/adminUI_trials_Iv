@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="./public/favicon.png" />
+    <link rel="stylesheet" href="./public/bootstrap-v4.4.1.min.css" />
+    <link rel="stylesheet" href="./public/style.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>
+        We're sorry but vue doesn't work properly without JavaScript enabled.
+        Please enable it to continue.
+      </strong>
+    </noscript>
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+      <header class="main-header">
+        <a class="logo">
+          <span class="logo-mini">
+            <b>A</b>
+            LT
+          </span>
+          <span class="logo-lg">
+            <b>Company</b>
+            Name
+          </span>
+        </a>
+
+        <nav class="navbar navbar-static-top"></nav>
+      </header>
+      <aside class="main-sidebar">
+        <section class="sidebar" style="height: auto;">
+          <ul class="sidebar-menu mt-4 " data-widget="tree">
+            <li id="link-users">
+              <a class="clickable" onclick="route('users', this)">
+                <span>Users</span>
+              </a>
+            </li>
+            <li id="link-posts">
+              <a class="clickable" onclick="route('posts', this)">
+                <span>Posts</span>
+              </a>
+            </li>
+            <li id="link-comments">
+              <a class="clickable" onclick="route('comments', this)">
+                <span>Comments</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+      <div class="content-wrapper" style="min-height: 900px; width: 100%;">
+        <div class="col-md-10">
+          <section class="content">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="box box-solid">
+                  <div class="box-header">
+                    <i class="fa fa-text-width"></i>
+                    <h3 class="box-title">Title</h3>
+                    <div class="box-tools pull-right">
+                      <a class="btn btn-primary text-white" id="add-data">
+                        Add
+                      </a>
+                    </div>
+                  </div>
+                  <div class="box-body">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                          </tr>
+                        </thead>
+                        <tbody id="data-list"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="box box-solid">
+                  <div class="box-header with-border">
+                    <i class="fa fa-text-width"></i>
+                    <h3 class="box-title">Detail</h3>
+                    <div class="box-tools pull-right">
+                      <a class="btn btn-primary text-white" id="edit-data">
+                        Edit
+                      </a>
+                    </div>
+                  </div>
+                  <div class="box-body" id="data-detail"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer />
+    </div>
+  </body>
+  <script src="./components/users.js"></script>
+  <script src="./components/posts.js"></script>
+  <script src="./components/comments.js"></script>
+  <script src="./index.js"></script>
+</html>
